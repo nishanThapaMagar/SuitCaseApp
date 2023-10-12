@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ItemDetailsActivity"
+    android:background="@android:color/white">
+
+    <!-- Material Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarItemsDetail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Item Details"
+        app:titleTextColor="@android:color/white"
+        app:contentInsetStart="0dp"
+        app:titleTextAppearance="@style/ToolbarTitleTextAppearance"
+        android:background="?attr/colorPrimary">
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/itemImageView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/black"
+        android:contentDescription="@string/item_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_placeholder"
+        tools:ignore="ImageContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: "
+                android:textSize="20sp"/>
+
+            <!-- Product Name -->
+            <TextView
+                android:id="@+id/itemNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_name"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: "
+                android:textSize="20sp"
+                />
+
+            <!-- Product Price -->
+            <TextView
+                android:id="@+id/itemPriceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_price"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Description"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+    <!-- Product Description -->
+    <TextView
+        android:id="@+id/itemDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/item_description"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="20dp"
+         />
+
+
+</LinearLayout>
